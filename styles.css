@@ -17,6 +17,32 @@ html, body {
     background: #fff;
 }
 
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 820px;
+    height: 820px;
+    background-image: url("assets/logo-watermark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.38;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.topbar, main, .footer {
+    position: relative;
+    z-index: 1;
+}
+
 a { color: inherit; text-decoration: none; }
 
 img { max-width: 100%; display: block; }
@@ -92,7 +118,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------- GALERIA ---------- */
-.galeria { padding: 48px 20px; background: #fff; text-align: center; }
+.galeria { padding: 48px 20px; background: rgba(255,255,255,0.88); text-align: center; }
 .galeria h2 { color: var(--orange-dark); font-size: 26px; margin-bottom: 8px; }
 .galeria-note { color: var(--muted); margin: 0 auto 28px; font-size: 14px; }
 .galeria-grid {
@@ -114,13 +140,13 @@ img { max-width: 100%; display: block; }
 .galeria-sub { color: var(--orange-dark); font-size: 18px; margin: 36px 0 18px; }
 
 /* ---------- NOSOTROS ---------- */
-.nosotros { padding: 48px 20px; background: #fff; }
+.nosotros { padding: 48px 20px; background: rgba(255,255,255,0.88); }
 .nosotros-inner { max-width: 700px; margin: 0 auto; text-align: center; }
 .nosotros h2 { color: var(--orange-dark); font-size: 26px; margin-bottom: 16px; }
 .nosotros p { color: var(--text); line-height: 1.6; font-size: 16px; margin: 0 0 12px; }
 
 /* ---------- MENU ---------- */
-.menu { padding: 48px 20px 56px; background: var(--cream); }
+.menu { padding: 48px 20px 56px; background: rgba(255,248,243,0.88); }
 .menu h2 { text-align: center; color: var(--orange-dark); font-size: 28px; margin-bottom: 8px; }
 .menu-note { text-align: center; color: var(--muted); max-width: 600px; margin: 0 auto 32px; font-size: 14px; }
 
@@ -167,7 +193,7 @@ img { max-width: 100%; display: block; }
 .menu-footnote { color: var(--muted); font-size: 12px; margin-top: 10px; }
 
 /* ---------- CONTACTO ---------- */
-.contacto { padding: 48px 20px; background: #fff; }
+.contacto { padding: 48px 20px; background: rgba(255,255,255,0.88); }
 .contacto-inner { max-width: 800px; margin: 0 auto; text-align: center; }
 .contacto h2 { color: var(--orange-dark); font-size: 26px; margin-bottom: 28px; }
 .contacto-grid {
