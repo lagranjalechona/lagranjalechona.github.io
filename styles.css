@@ -120,6 +120,7 @@ img { max-width: 100%; display: block; }
     transition: transform 0.2s ease;
 }
 .galeria-grid img:hover { transform: scale(1.03); }
+.galeria-sub { color: var(--orange-dark); font-size: 18px; margin: 36px 0 18px; }
 
 /* ---------- NOSOTROS ---------- */
 .nosotros { padding: 48px 20px; background: #fff; }
